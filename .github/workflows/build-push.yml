@@ -9,7 +9,7 @@ jobs:
       fail-fast: false
       matrix:
         dir:
-          - go1.25
+          - base
     uses: libops/.github/.github/workflows/build-push-ghcr.yaml@main
     with:
       image: ${{ matrix.dir }}
