@@ -10,7 +10,7 @@ jobs:
       matrix:
         dir:
           - base
-          - s6-overlay
+          - vault
     uses: libops/.github/.github/workflows/build-push.yaml@main
     with:
       image: ${{ matrix.dir }}
