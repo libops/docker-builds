@@ -10,7 +10,8 @@ jobs:
       matrix:
         dir:
           - base
-    uses: libops/.github/.github/workflows/build-push-ghcr.yaml@main
+          - s6-overlay
+    uses: libops/.github/.github/workflows/build-push.yaml@main
     with:
       image: ${{ matrix.dir }}
       context: ${{ matrix.dir }}
