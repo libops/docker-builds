@@ -26,8 +26,6 @@ ARG \
     OPENSSL_VERSION=3.5.5-r0 \
     # renovate: datasource=repology depName=alpine_3_23/patch
     PATCH_VERSION=2.8-r0 \
-    # renovate: datasource=repology depName=alpine_3_23/postgresql18-client
-    POSTGRES_CLIENT_VERSION=18.2-r0 \
     # renovate: datasource=repology depName=alpine_3_23/procps-ng
     PROCPS_VERSION=4.0.5-r0 \
     # renovate: datasource=repology depName=alpine_3_23/shadow
@@ -52,7 +50,6 @@ RUN --mount=type=cache,id=base-apk-${TARGETARCH},sharing=locked,target=/var/cach
     netcat-openbsd=="${NETCAT_OPENBSD_VERSION}" \
     openssl=="${OPENSSL_VERSION}" \
     patch=="${PATCH_VERSION}" \
-    postgresql18-client=="${POSTGRES_CLIENT_VERSION}" \
     procps=="${PROCPS_VERSION}" \
     shadow=="${SHADOW_VERSION}" \
     util-linux=="${UTIL_LINUX_VERSION}" \
