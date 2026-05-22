@@ -1,4 +1,4 @@
-FROM alpine:3.23@sha256:25109184c71bdad752c8312a8623239686a9a2071e8825f20acb8f2198c3f659
+FROM alpine:3.23@sha256:5b10f432ef3da1b8d4c7eb6c487f2f5a8f096bc91145e68878dd4a5019afde11
 
 ARG \
     TARGETARCH \
@@ -7,23 +7,23 @@ ARG \
     # renovate: datasource=repology depName=alpine_3_23/ca-certificates
     CA_CERTIFICATES_VERSION=20251003-r0 \
     # renovate: datasource=repology depName=alpine_3_23/curl
-    CURL_VERSION=8.17.0-r1 \
+    CURL_VERSION=8.19.0-r0 \
     # renovate: datasource=repology depName=alpine_3_23/git
     GIT_VERSION=2.52.0-r0 \
     # renovate: datasource=repology depName=alpine_3_23/gnupg
     GNUPG_VERSION=2.4.9-r0 \
     # renovate: datasource=repology depName=alpine_3_23/go
-    GO_VERSION=1.25.7-r0 \
+    GO_VERSION=1.25.10-r0 \
     # renovate: datasource=repology depName=alpine_3_23/gzip
     GZIP_VERSION=1.14-r2 \
     # renovate: datasource=repology depName=alpine_3_23/jq
     JQ_VERSION=1.8.1-r0 \
     # renovate: datasource=repology depName=alpine_3_23/mariadb-client
-    MARIADB_CLIENT_VERSION=11.4.9-r0 \
+    MARIADB_CLIENT_VERSION=11.4.10-r0 \
     # renovate: datasource=repology depName=alpine_3_23/netcat-openbsd
     NETCAT_OPENBSD_VERSION=1.234.1-r0 \
     # renovate: datasource=repology depName=alpine_3_23/openssl
-    OPENSSL_VERSION=3.5.5-r0 \
+    OPENSSL_VERSION=3.5.6-r0 \
     # renovate: datasource=repology depName=alpine_3_23/patch
     PATCH_VERSION=2.8-r0 \
     # renovate: datasource=repology depName=alpine_3_23/procps-ng
@@ -31,9 +31,9 @@ ARG \
     # renovate: datasource=repology depName=alpine_3_23/shadow
     SHADOW_VERSION=4.18.0-r0 \
     # renovate: datasource=repology depName=alpine_3_23/util-linux
-    UTIL_LINUX_VERSION=2.41.2-r0 \
+    UTIL_LINUX_VERSION=2.41.4-r0 \
     # renovate: datasource=repology depName=alpine_3_23/yq-go
-    YQ_VERSION=4.49.2-r3
+    YQ_VERSION=4.49.2-r6
 
 RUN --mount=type=cache,id=base-apk-${TARGETARCH},sharing=locked,target=/var/cache/apk \
     ln -s /var/cache/apk /etc/apk/cache && \
